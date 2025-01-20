@@ -13,6 +13,14 @@ pipeline {
                 '''
             }
         }
+        stage('Testing'){
+            steps {
+                sh '''
+                    echo 'Testing is in progress...'
+                    mvn test
+                '''
+            }
+        }
     }
     /*
     post {
