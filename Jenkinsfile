@@ -22,10 +22,13 @@ pipeline {
             }
         }
         stage('Package & Install'){
-            sh '''
-                mvn package
-                mvn install
-            '''
+            steps {
+                sh '''
+                    mvn package
+                    mvn install
+                '''
+
+            }
         }
     }
     /*
