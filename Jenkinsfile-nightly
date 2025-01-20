@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('maven build') {
+            steps {
+                sh '''
+                    docker build -f CI\Dockerfile -t maven-build .
+                '''
+            }
+        }
+    }
+}
