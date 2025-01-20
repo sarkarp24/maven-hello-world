@@ -5,7 +5,7 @@ pipeline {
         stage('maven build') {
             steps {
                 sh '''
-                    docker build -f CI\Dockerfile -t maven-build .
+                    docker build -f CI/Dockerfile -t maven-build .
                 '''
             }
         }
