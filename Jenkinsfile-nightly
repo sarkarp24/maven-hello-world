@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('maven build') {
+        stage('maven docker build') {
             steps {
                 sh '''
                     docker build -f CI/Dockerfile -t maven-build .
