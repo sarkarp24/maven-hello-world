@@ -21,6 +21,12 @@ pipeline {
                 '''
             }
         }
+        stage('Package & Install'){
+            sh '''
+                mvn package
+                mvn install
+            '''
+        }
     }
     /*
     post {
